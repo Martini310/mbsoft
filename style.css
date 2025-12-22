@@ -1,0 +1,144 @@
+/* Custom Typography & Effects */
+
+@layer utilities {
+    .glass-panel {
+        background: rgba(15, 17, 35, 0.6);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+    }
+    
+    .glass-panel-heavy {
+        background: rgba(5, 5, 17, 0.85);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+    
+    .glow-text {
+        text-shadow: 0 0 20px rgba(46, 92, 255, 0.5);
+    }
+    
+    .glow-button {
+        box-shadow: 0 0 10px rgba(46, 92, 255, 0.2);
+        transition: all 0.3s ease;
+    }
+    
+    .glow-button:hover {
+        box-shadow: 0 0 20px rgba(0, 240, 255, 0.6);
+    }
+
+    .neon-border {
+        border: 1px solid rgba(46, 92, 255, 0.3);
+    }
+    
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #050511; 
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #334155; 
+        border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #2E5CFF; 
+    }
+}
+
+/* Animations */
+@keyframes spin-reverse {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0deg); }
+}
+
+.animate-spin-reverse {
+    animation: spin-reverse 1.5s linear infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% { opacity: 0.5; box-shadow: 0 0 5px rgba(0, 240, 255, 0.2); }
+    50% { opacity: 1; box-shadow: 0 0 15px rgba(0, 240, 255, 0.6); }
+}
+
+.animate-pulse-glow {
+    animation: pulse-glow 2s infinite ease-in-out;
+}
+
+/* Custom Selection */
+::selection {
+    background: #2E5CFF;
+    color: #ffffff;
+}
+
+/* Service Card Hover Effects */
+.service-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(46, 92, 255, 0.6);
+    box-shadow: 0 15px 40px -10px rgba(46, 92, 255, 0.3);
+}
+
+/* Portfolio Hover Effects */
+.portfolio-item {
+    transition: all 0.5s ease;
+    filter: grayscale(100%);
+}
+
+.portfolio-item:hover {
+    filter: grayscale(0%);
+    transform: scale(1.02);
+}
+
+/* Form Autofill overrides */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0px 1000px #0F1123 inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Modal Styling */
+#modal-overlay {
+    transition: opacity 0.4s ease;
+}
+
+.modal-content {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+    transform: scale(0.95);
+    opacity: 0;
+}
+
+#modal-overlay.active .modal-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Loader */
+#loader-bar {
+    transition: width 0.2s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Mobile Menu */
+#mobile-menu {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}

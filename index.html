@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth bg-obsidian">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MB Soft - Custom AI & Web Development Solutions. We engineer intelligence.">
+    <title>MB Soft | Algorithmic Elegance</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#050511',
+                        deepspace: '#0F1123',
+                        azure: '#2E5CFF',
+                        hyperviolet: '#7000FF',
+                        neonphlox: '#BC00FE',
+                        cyanpulse: '#00F0FF',
+                        slatemist: '#94A3B8'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    backgroundImage: {
+                        'neural-fade': 'linear-gradient(135deg, #2E5CFF 0%, #7000FF 100%)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body class="bg-obsidian text-white font-sans overflow-x-hidden selection:bg-azure selection:text-white">
+
+    <!-- Preloader -->
+    <div id="loader" class="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-obsidian transition-opacity duration-700">
+        <div class="text-4xl font-heading font-bold mb-4 tracking-widest text-transparent bg-clip-text bg-neural-fade">MB SOFT</div>
+        <div class="w-64 h-1 bg-deepspace rounded-full overflow-hidden">
+            <div id="loader-bar" class="h-full bg-cyanpulse w-0 shadow-[0_0_10px_#00F0FF]"></div>
+        </div>
+        <div id="loader-status" class="mt-2 font-mono text-xs text-slatemist animate-pulse">INITIALIZING SYSTEMS...</div>
+    </div>
+
+    <!-- Navigation -->
+    <header id="navbar" class="fixed w-full z-40 top-0 transition-all duration-300 border-b border-transparent">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3 group relative z-50">
+                <img src="" alt="MB Soft Logo" id="nav-logo" class="h-10 w-10 object-contain drop-shadow-[0_0_10px_rgba(46,92,255,0.5)] transition-transform group-hover:scale-110">
+                <span class="font-heading font-bold text-xl tracking-wider text-transparent bg-clip-text bg-neural-fade">MB SOFT</span>
+            </a>
+            
+            <nav class="hidden md:flex gap-6 items-center">
+                <a href="#home" class="nav-link text-sm font-semibold tracking-widest hover:text-cyanpulse transition-colors relative group" id="nav-home" data-i18n="nav.home">
+                    HOME
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyanpulse transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#services" class="nav-link text-sm font-semibold tracking-widest hover:text-cyanpulse transition-colors relative group" id="nav-services" data-i18n="nav.services">
+                    SERVICES
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyanpulse transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#portfolio" class="nav-link text-sm font-semibold tracking-widest hover:text-cyanpulse transition-colors relative group" id="nav-portfolio" data-i18n="nav.portfolio">
+                    PORTFOLIO
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyanpulse transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#about" class="nav-link text-sm font-semibold tracking-widest hover:text-cyanpulse transition-colors relative group" id="nav-about" data-i18n="nav.about">
+                    ABOUT
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyanpulse transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#contact" class="nav-link text-sm font-semibold tracking-widest hover:text-cyanpulse transition-colors relative group" id="nav-contact" data-i18n="nav.contact">
+                    CONTACT
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyanpulse transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <div class="flex items-center gap-2 border border-white/10 px-3 py-1 rounded bg-white/5">
+                    <label for="language-switcher" class="sr-only">Language</label>
+                    <select id="language-switcher" class="bg-transparent text-white text-xs font-mono focus:outline-none cursor-pointer">
+                        <option value="en">EN</option>
+                        <option value="pl">PL</option>
+                    </select>
+                </div>
+                <button onclick="document.getElementById('contact').scrollIntoView()" class="glow-button px-6 py-2 bg-transparent border border-azure text-azure font-mono text-xs rounded hover:bg-azure/10 transition-all" id="nav-start" data-i18n="nav.startProject">
+                    [ START PROJECT ]
+                </button>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none relative z-50">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 bg-obsidian/95 backdrop-blur-xl z-40 transform translate-x-full md:hidden flex flex-col justify-center items-center gap-8 border-l border-white/5">
+            <a href="#home" class="mobile-link text-2xl font-heading font-bold text-white hover:text-cyanpulse transition-colors" data-i18n="nav.home">HOME</a>
+            <a href="#services" class="mobile-link text-2xl font-heading font-bold text-white hover:text-cyanpulse transition-colors" data-i18n="nav.services">SERVICES</a>
+            <a href="#portfolio" class="mobile-link text-2xl font-heading font-bold text-white hover:text-cyanpulse transition-colors" data-i18n="nav.portfolio">PORTFOLIO</a>
+            <a href="#about" class="mobile-link text-2xl font-heading font-bold text-white hover:text-cyanpulse transition-colors" data-i18n="nav.about">ABOUT</a>
+            <a href="#contact" class="mobile-link text-2xl font-heading font-bold text-white hover:text-cyanpulse transition-colors" data-i18n="nav.contact">CONTACT</a>
+            <div class="flex items-center gap-2 mt-4 border border-white/10 px-3 py-1 rounded bg-white/5">
+                <label for="language-switcher-mobile" class="sr-only">Language</label>
+                <select id="language-switcher-mobile" class="bg-transparent text-white text-sm font-mono focus:outline-none cursor-pointer">
+                    <option value="en">EN</option>
+                    <option value="pl">PL</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+            <!-- Canvas Background for Particles -->
+            <canvas id="hero-canvas" class="absolute inset-0 w-full h-full z-0 opacity-60"></canvas>
+            <!-- Background Image Fallback/Overlay -->
+            <div id="hero-bg" class="absolute inset-0 z-[-1] bg-cover bg-center opacity-20 mix-blend-overlay"></div>
+            
+            <div class="container mx-auto px-6 relative z-10 text-center parallax-element" data-speed="0.5">
+                <div class="inline-block mb-4 px-4 py-1 border border-cyanpulse/30 rounded-full bg-cyanpulse/5 backdrop-blur-sm animate-pulse-glow">
+                    <span class="font-mono text-cyanpulse text-xs tracking-widest" id="hero-status" data-i18n="hero.status">● SYSTEM ONLINE</span>
+                </div>
+                <h1 class="font-heading font-bold text-5xl md:text-7xl lg:text-8xl mb-6 leading-tight">
+                    <span id="hero-heading-main" data-i18n="hero.headingMain">WE ENGINEER</span> <br>
+                    <span class="text-transparent bg-clip-text bg-neural-fade glow-text" id="hero-heading-highlight" data-i18n="hero.headingHighlight">INTELLIGENCE</span>
+                </h1>
+                <p class="font-mono text-slatemist text-sm md:text-base max-w-2xl mx-auto mb-10 h-12 flex justify-center items-center">
+                    > <span id="typing-text" class="mr-1">Initializing...</span><span class="animate-pulse w-2 h-4 bg-cyanpulse block"></span>
+                </p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                    <a href="#contact" class="group relative px-8 py-4 bg-azure overflow-hidden rounded-sm transition-all hover:scale-105 hover:shadow-[0_0_25px_rgba(46,92,255,0.4)]">
+                        <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-azure to-hyperviolet opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <span class="relative font-bold tracking-widest text-white z-10" id="hero-cta-primary" data-i18n="hero.ctaPrimary">[ INITIALIZE PROJECT ]</span>
+                    </a>
+                    <a href="#portfolio" class="text-slatemist hover:text-white transition-colors text-sm font-semibold flex items-center gap-2 group">
+                        <span id="hero-cta-secondary" data-i18n="hero.ctaSecondary">View Our Work</span> <i data-lucide="arrow-down" class="w-4 h-4 group-hover:translate-y-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
+                <i data-lucide="mouse-pointer-2" class="text-cyanpulse/50 w-6 h-6"></i>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-24 bg-obsidian relative z-10">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 fade-in-section">
+                    <div>
+                        <h2 class="font-heading font-bold text-4xl mb-2 text-white"><span id="services-heading-main" data-i18n="services.headingMain">CORE</span> <span class="text-azure" id="services-heading-highlight" data-i18n="services.headingHighlight">CAPABILITIES</span></h2>
+                        <div class="h-1 w-20 bg-gradient-to-r from-azure to-hyperviolet"></div>
+                    </div>
+                    <p class="font-mono text-slatemist mt-4 md:mt-0 max-w-md text-right border-r-2 border-azure pr-4" id="services-tagline" data-i18n="services.tagline">
+                        // Deploying scalable architectures for the next generation of web interaction.
+                    </p>
+                </div>
+
+                <div id="services-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Dynamic Service Cards Injected Here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-24 bg-deepspace relative overflow-hidden z-10">
+            <!-- Background Decoration -->
+            <div class="absolute top-0 right-0 w-96 h-96 bg-hyperviolet/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="mb-16 fade-in-section">
+                    <h2 class="font-heading font-bold text-4xl mb-2"><span id="portfolio-heading-main" data-i18n="portfolio.headingMain">FEATURED</span> <span class="text-neonphlox" id="portfolio-heading-highlight" data-i18n="portfolio.headingHighlight">DEPLOYMENTS</span></h2>
+                    <p class="text-slatemist font-mono text-sm" id="portfolio-subheading" data-i18n="portfolio.subheading">CASE_STUDIES_LOG_2025</p>
+                </div>
+
+                <!-- Horizontal Scroll Container -->
+                <div id="portfolio-container" class="flex overflow-x-auto gap-8 pb-12 snap-x snap-mandatory scrollbar-hide cursor-grab active:cursor-grabbing">
+                    <!-- Dynamic Portfolio Items Injected Here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-32 relative bg-cover bg-center bg-fixed z-10" style="background-image: url('');" data-bg-target="about">
+            <div class="absolute inset-0 bg-obsidian/90"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div class="fade-in-section">
+                        <h2 class="font-heading font-bold text-4xl mb-6"><span id="about-heading-main" data-i18n="about.headingMain">BRIDGING CODE &</span> <span class="text-cyanpulse" id="about-heading-highlight" data-i18n="about.headingHighlight">COGNITION</span></h2>
+                        <p id="about-mission" class="text-lg text-slatemist mb-6 leading-relaxed"></p>
+                        <p id="about-approach" class="text-sm font-mono text-azure mb-8 border-l-2 border-azure pl-4 py-2 bg-azure/5"></p>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="p-4 glass-panel rounded border border-white/5 hover:border-cyanpulse/30 transition-colors">
+                                <h3 class="text-3xl font-bold text-white mb-1 counter" data-target="98">0</h3>
+                                <p class="text-xs text-slatemist font-mono" id="about-retention-label" data-i18n="about.retention">% CLIENT RETENTION</p>
+                            </div>
+                            <div class="p-4 glass-panel rounded border border-white/5 hover:border-cyanpulse/30 transition-colors">
+                                <h3 class="text-3xl font-bold text-white mb-1">24/7</h3>
+                                <p class="text-xs text-slatemist font-mono" id="about-uptime-label" data-i18n="about.uptime">SYSTEM UPTIME</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative h-96 w-full fade-in-section delay-200 parallax-element" data-speed="0.2">
+                        <div class="absolute inset-0 border-2 border-azure/30 rounded-lg transform translate-x-4 translate-y-4"></div>
+                        <div class="absolute inset-0 glass-panel border border-white/10 rounded-lg flex items-center justify-center p-8 backdrop-blur-md">
+                             <p class="font-mono text-center text-sm leading-8 text-slatemist">
+                                 <span class="text-hyperviolet">const</span> <span class="text-cyanpulse">future</span> = <span class="text-azure">await</span> MBSoft.<span class="text-neonphlox">build</span>({<br>
+                                 &nbsp;&nbsp;innovation: <span class="text-hyperviolet">true</span>,<br>
+                                 &nbsp;&nbsp;limits: <span class="text-hyperviolet">null</span><br>
+                                 });<br>
+                                 <span class="text-green-400">// Output: Revolution</span>
+                             </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 bg-obsidian relative z-10">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-12 rounded-2xl overflow-hidden glass-panel border border-white/10">
+                    
+                    <!-- Contact Form -->
+                    <div class="p-8 md:p-12 order-2 lg:order-1">
+                        <h2 class="font-heading font-bold text-3xl mb-2"><span id="contact-heading-main" data-i18n="contact.headingMain">INITIALIZE</span> <span class="text-cyanpulse" id="contact-heading-highlight" data-i18n="contact.headingHighlight">CONNECTION</span></h2>
+                        <p class="text-slatemist mb-8 font-mono text-sm" id="contact-description" data-i18n="contact.description">Tell us about your project architecture.</p>
+                        
+                        <form id="contact-form" class="space-y-6">
+                            <div class="group">
+                                <label class="block text-xs font-mono text-azure mb-1" id="label-name" data-i18n="contact.form.name">ID // NAME</label>
+                                <input id="input-name" type="text" placeholder="Enter your designation..." class="w-full bg-deepspace border border-white/10 rounded p-3 text-white focus:border-cyanpulse focus:outline-none focus:bg-deepspace/50 transition-all" required>
+                            </div>
+                            <div class="group">
+                                <label class="block text-xs font-mono text-azure mb-1" id="label-email" data-i18n="contact.form.email">COMMS // EMAIL</label>
+                                <input id="input-email" type="email" placeholder="name@domain.com" class="w-full bg-deepspace border border-white/10 rounded p-3 text-white focus:border-cyanpulse focus:outline-none focus:bg-deepspace/50 transition-all" required>
+                            </div>
+                            <div class="group">
+                                <label class="block text-xs font-mono text-azure mb-1" id="label-subject" data-i18n="contact.form.subject">PROTOCOL // SUBJECT</label>
+                                <div class="relative">
+                                    <select id="subject-select" class="w-full bg-deepspace border border-white/10 rounded p-3 text-white focus:border-cyanpulse focus:outline-none appearance-none cursor-pointer transition-all">
+                                        <option>Web Design & Development</option>
+                                        <option>Web Application</option>
+                                        <option>Maintenance & Support</option>
+                                        <option>Partnership</option>
+                                    </select>
+                                    <i data-lucide="chevron-down" class="absolute right-3 top-3.5 w-4 h-4 text-slatemist pointer-events-none"></i>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <label class="block text-xs font-mono text-azure mb-1" id="label-message" data-i18n="contact.form.message">PAYLOAD // MESSAGE</label>
+                                <textarea id="input-message" rows="4" placeholder="Describe your project parameters..." class="w-full bg-deepspace border border-white/10 rounded p-3 text-white focus:border-cyanpulse focus:outline-none focus:bg-deepspace/50 transition-all" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-4 bg-gradient-to-r from-azure to-hyperviolet font-bold tracking-widest text-white rounded hover:shadow-[0_0_20px_rgba(46,92,255,0.4)] transition-all transform active:scale-[0.98]" id="contact-submit" data-i18n="contact.buttons.submit">
+                                [ TRANSMIT DATA ]
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Network Visualization Placeholder -->
+                    <div class="relative bg-deepspace min-h-[400px] flex flex-col items-center justify-center p-8 overflow-hidden order-1 lg:order-2">
+                        <!-- Canvas for Interactive Network -->
+                        <canvas id="contact-canvas" class="absolute inset-0 w-full h-full z-0 opacity-50"></canvas>
+                        
+                        <img id="contact-map" src="" alt="Global Network" class="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-screen pointer-events-none">
+                        
+                        <div class="relative z-10 text-center space-y-4 glass-panel-heavy p-8 rounded border border-white/10 backdrop-blur-xl shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                            <h3 class="font-heading font-bold text-xl tracking-wide" id="contact-panel-title" data-i18n="contact.cardTitle">HQ COORDINATES</h3>
+                            <p id="contact-address" class="text-slatemist text-sm"></p>
+                            <div class="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-4"></div>
+                            <p id="contact-email" class="font-mono text-cyanpulse hover:text-white transition-colors cursor-pointer"></p>
+                            <p id="contact-phone" class="font-mono text-white"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-obsidian border-t border-white/5 py-12 relative z-10">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2">
+                <div class="relative w-3 h-3">
+                    <div class="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-75"></div>
+                    <div class="relative w-3 h-3 bg-green-500 rounded-full"></div>
+                </div>
+                <span class="font-mono text-xs text-slatemist" id="footer-status" data-i18n="footer.status">SYSTEM STATUS: NOMINAL</span>
+            </div>
+            <p class="font-mono text-xs text-slatemist opacity-50 hover:opacity-100 transition-opacity" id="footer-copy" data-i18n="footer.copyright">&copy; 2025 MB SOFT. ALL SYSTEMS NOMINAL.</p>
+            <div class="flex gap-6">
+                <a href="#" class="text-slatemist hover:text-cyanpulse transition-colors transform hover:-translate-y-1"><i data-lucide="github" class="w-5 h-5"></i></a>
+                <a href="#" class="text-slatemist hover:text-cyanpulse transition-colors transform hover:-translate-y-1"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                <a href="#" class="text-slatemist hover:text-cyanpulse transition-colors transform hover:-translate-y-1"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Universal Modal -->
+    <div id="modal-overlay" class="fixed inset-0 z-[60] bg-obsidian/90 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="modal-content relative w-full max-w-2xl bg-deepspace border border-white/10 rounded-xl shadow-[0_0_50px_rgba(46,92,255,0.2)] overflow-hidden">
+            <!-- Modal Header -->
+            <div class="p-6 border-b border-white/10 flex justify-between items-center bg-white/5">
+                <h3 id="modal-title" class="font-heading font-bold text-2xl text-white"></h3>
+                <button id="modal-close" class="text-slatemist hover:text-white transition-colors">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <!-- Modal Body -->
+            <div class="p-8 overflow-y-auto max-h-[70vh]">
+                <div id="modal-image-container" class="mb-6 hidden rounded-lg overflow-hidden border border-white/10">
+                    <img id="modal-image" src="" class="w-full h-48 object-cover">
+                </div>
+                <p id="modal-desc" class="text-slatemist leading-relaxed mb-6"></p>
+                <div id="modal-tags" class="flex flex-wrap gap-2 mb-6"></div>
+                <button id="modal-cta" class="w-full py-3 border border-azure text-azure font-mono text-sm rounded hover:bg-azure hover:text-white transition-colors" data-i18n="modal.cta">
+                    [ REQUEST SIMILAR PROJECT ]
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="main.js"></script>
+</body>
+</html>

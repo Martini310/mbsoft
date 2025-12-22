@@ -1,0 +1,302 @@
+{
+  "languages": {
+    "en": {
+      "text": {
+        "preloader": "INITIALIZING SYSTEMS...",
+        "nav": {
+          "home": "HOME",
+          "services": "SERVICES",
+          "portfolio": "PORTFOLIO",
+          "about": "ABOUT",
+          "contact": "CONTACT",
+          "startProject": "[ START PROJECT ]"
+        },
+        "hero": {
+          "status": "● SYSTEM ONLINE",
+          "headingMain": "WE ENGINEER",
+          "headingHighlight": "INTELLIGENCE",
+          "ctaPrimary": "[ INITIALIZE PROJECT ]",
+          "ctaSecondary": "View Our Work"
+        },
+        "services": {
+          "headingMain": "CORE",
+          "headingHighlight": "CAPABILITIES",
+          "tagline": "// Deploying scalable architectures for the next generation of web interaction.",
+          "accessDetails": "[ ACCESS_DETAILS ]"
+        },
+        "portfolio": {
+          "headingMain": "FEATURED",
+          "headingHighlight": "DEPLOYMENTS",
+          "subheading": "CASE_STUDIES_LOG_2025"
+        },
+        "about": {
+          "headingMain": "BRIDGING CODE &",
+          "headingHighlight": "COGNITION",
+          "retention": "% CLIENT RETENTION",
+          "uptime": "SYSTEM UPTIME"
+        },
+        "contact": {
+          "headingMain": "INITIALIZE",
+          "headingHighlight": "CONNECTION",
+          "description": "Tell us about your project architecture.",
+          "form": {
+            "name": "ID // NAME",
+            "email": "COMMS // EMAIL",
+            "subject": "PROTOCOL // SUBJECT",
+            "message": "PAYLOAD // MESSAGE",
+            "placeholders": {
+              "name": "Enter your designation...",
+              "email": "name@domain.com",
+              "message": "Describe your project parameters..."
+            },
+            "subjects": [
+              "Web Design & Development",
+              "Web Application",
+              "Maintenance & Support",
+              "Partnership"
+            ]
+          },
+          "cardTitle": "HQ COORDINATES",
+          "buttons": {
+            "submit": "[ TRANSMIT DATA ]",
+            "sending": "[ TRANSMITTING... ]",
+            "success": "[ DATA RECEIVED ]"
+          }
+        },
+        "footer": {
+          "status": "SYSTEM STATUS: NOMINAL",
+          "copyright": "\u00a9 2025 MB SOFT. ALL SYSTEMS NOMINAL."
+        },
+        "modal": {
+          "cta": "[ REQUEST SIMILAR PROJECT ]"
+        }
+      },
+      "company": {
+        "name": "MB Soft",
+        "tagline": "WE ENGINEER INTELLIGENCE.",
+        "subheadline": [
+          "Custom LLMs",
+          "Cloud Infrastructure",
+          "Immersive Web Experiences"
+        ],
+        "description": "Architecting the digital future with precision and algorithmic elegance.",
+        "email": "hello@mbsoft.tech",
+        "phone": "+1 (555) 010-2025",
+        "address": "Digital Nomad Network / Global",
+        "logo_url": "/assets/logo.png"
+      },
+      "hero": {
+        "background_image": "/assets/I4UCR-mb_soft_hero_background_ai_index_0@1024x1024.jpeg"
+      },
+      "services": [
+        {
+          "id": "web-design",
+          "title": "Web Design & Dev",
+          "blurb": "Pixel-perfect aesthetics meet high-performance code. We construct immersive digital environments.",
+          "icon_url": "/assets/HVS1M-web_design_development_icon_index_1@1024x1024.jpeg",
+          "details": "Our web design process focuses on responsive fluidity, dark-mode native aesthetics, and SEO architecture using React, Next.js, and WebGL. We don't just build websites; we create digital experiences that captivate and convert.",
+          "stack": ["React", "Next.js", "WebGL", "TailwindCSS"]
+        },
+        {
+          "id": "app-dev",
+          "title": "Web App Development",
+          "blurb": "Scalable, secure, and AI-ready applications designed to handle complex logic with fluid simplicity.",
+          "icon_url": "/assets/9FN85-web_app_development_icon_glassmorphism_index_2@1024x1024.jpeg",
+          "details": "We build API-first, scalable cloud infrastructure using Node.js, Python, and Docker. From MVP to enterprise-scale, our architecture is designed to handle high concurrency and large datasets.",
+          "stack": ["Node.js", "Python", "Docker", "AWS"]
+        },
+        {
+          "id": "maintenance",
+          "title": "Maintenance & Support",
+          "blurb": "Proactive ecosystem monitoring. We ensure your infrastructure remains resilient against entropy.",
+          "icon_url": "/assets/96H23-website_maintenance_support_icon_index_3@1024x1024.jpeg",
+          "details": "24/7 Uptime monitoring, immediate security patching, and monthly performance audits to keep your systems nominal. We act as your digital immune system.",
+          "stack": ["Security", "CI/CD", "Monitoring", "Audits"]
+        }
+      ],
+      "portfolio": [
+        {
+          "id": "p1",
+          "title": "Nexus FinTech",
+          "category": "Web Application",
+          "image": "/assets/4FWWW-futuristic_portfolio_thumbnails_index_0@1024x1024.jpeg",
+          "desc": "High-frequency trading dashboard with real-time biometric security.",
+          "details": "A secure, low-latency trading platform built for institutional investors. Features real-time websocket data feeds, biometric authentication via WebAuthn, and 3D data visualization."
+        },
+        {
+          "id": "p2",
+          "title": "Aether AI",
+          "category": "Generative AI",
+          "image": "/assets/4FWWW-futuristic_portfolio_thumbnails_index_0@1024x1024.jpeg",
+          "desc": "Custom LLM interface designed for prompt-engineering efficiency.",
+          "details": "A custom wrapper around GPT-4 designed for power users, featuring prompt chaining, variable injection, and local history encryption."
+        },
+        {
+          "id": "p3",
+          "title": "Orbit E-Commerce",
+          "category": "Web Design",
+          "image": "/assets/4FWWW-futuristic_portfolio_thumbnails_index_0@1024x1024.jpeg",
+          "desc": "Luxury retail experience utilizing WebGL for 3D product rendering.",
+          "details": "An award-winning e-commerce site featuring 360-degree product views, AR try-on capabilities, and a headless CMS backend for rapid content updates."
+        }
+      ],
+      "about": {
+        "background": "/assets/YWW72-mb_soft_about_background_index_1@1024x1024.jpeg",
+        "mission": "We exist to bridge the gap between rigid software engineering and organic human intelligence.",
+        "approach": "Structured Fluidity: Reliable grids meet organic adaptability. We deploy code that learns and evolves."
+      },
+      "contact": {
+        "map_image": "/assets/I0QQI-contact_page_network_visualization_index_2@1024x1024.jpeg"
+      }
+    },
+    "pl": {
+      "text": {
+        "preloader": "INICJALIZACJA SYSTEM\u00d3W...",
+        "nav": {
+          "home": "START",
+          "services": "US\u0141UGI",
+          "portfolio": "PORTFOLIO",
+          "about": "O NAS",
+          "contact": "KONTAKT",
+          "startProject": "[ ROZPOCZNIJ PROJEKT ]"
+        },
+        "hero": {
+          "status": "● SYSTEM ONLINE",
+          "headingMain": "PROJEKTUJEMY",
+          "headingHighlight": "INTELIGENCJ\u0118",
+          "ctaPrimary": "[ ZAINICJUJ PROJEKT ]",
+          "ctaSecondary": "Zobacz realizacje"
+        },
+        "services": {
+          "headingMain": "KLUCZOWE",
+          "headingHighlight": "KOMPETENCJE",
+          "tagline": "// Budujemy skalowalne architektury nowej generacji interakcji web.",
+          "accessDetails": "[ ZOBACZ_SZCZEG\u00d3\u0141Y ]"
+        },
+        "portfolio": {
+          "headingMain": "WYBRANE",
+          "headingHighlight": "REALIZACJE",
+          "subheading": "STUDIA_PRZYPADK\u00d3W_2025"
+        },
+        "about": {
+          "headingMain": "\u0141\u0104CZYMY KOD I",
+          "headingHighlight": "KOGNICJ\u0118",
+          "retention": "% RETENCJI KLIENT\u00d3W",
+          "uptime": "DOST\u0118PNO\u015a\u0106 SYSTEMU"
+        },
+        "contact": {
+          "headingMain": "ZAINICJUJ",
+          "headingHighlight": "KONTAKT",
+          "description": "Opowiedz nam o architekturze swojego projektu.",
+          "form": {
+            "name": "ID // IMI\u0118",
+            "email": "COMMS // E-MAIL",
+            "subject": "PROTOK\u00d3\u0141 // TEMAT",
+            "message": "\u0141ADUNEK // WIADOMO\u015a\u0106",
+            "placeholders": {
+              "name": "Wpisz swoje imi\u0119...",
+              "email": "nazwa@domena.com",
+              "message": "Opisz parametry projektu..."
+            },
+            "subjects": [
+              "Projektowanie i rozw\u00f3j stron",
+              "Aplikacja webowa",
+              "Utrzymanie i wsparcie",
+              "Partnerstwo"
+            ]
+          },
+          "cardTitle": "WSP\u00d3\u0141RZ\u0118DNE HQ",
+          "buttons": {
+            "submit": "[ WY\u015aLIJ DANE ]",
+            "sending": "[ WYSY\u0141ANIE... ]",
+            "success": "[ DANE OTRZYMANE ]"
+          }
+        },
+        "footer": {
+          "status": "STATUS SYSTEMU: NOMINALNY",
+          "copyright": "\u00a9 2025 MB SOFT. WSZYSTKIE SYSTEMY NOMINALNE."
+        },
+        "modal": {
+          "cta": "[ ZAM\u00d3W PODOBNY PROJEKT ]"
+        }
+      },
+      "company": {
+        "name": "MB Soft",
+        "tagline": "PROJEKTUJEMY INTELIGENCJ\u0118.",
+        "subheadline": [
+          "Dedykowane modele LLM",
+          "Infrastruktura chmurowa",
+          "Immersyjne do\u015bwiadczenia webowe"
+        ],
+        "description": "Projektujemy cyfrow\u0105 przysz\u0142o\u015b\u0107 z precyzj\u0105 i algorytmiczn\u0105 elegancj\u0105.",
+        "email": "hello@mbsoft.tech",
+        "phone": "+1 (555) 010-2025",
+        "address": "Digital Nomad Network / Global",
+        "logo_url": "/assets/logo.png"
+      },
+      "hero": {
+        "background_image": "/assets/I4UCR-mb_soft_hero_background_ai_index_0@1024x1024.jpeg"
+      },
+      "services": [
+        {
+          "id": "web-design",
+          "title": "Projektowanie WWW",
+          "blurb": "Pixel-perfect spotyka wydajno\u015b\u0107. Tworzymy immersyjne \u015brodowiska cyfrowe.",
+          "icon_url": "/assets/HVS1M-web_design_development_icon_index_1@1024x1024.jpeg",
+          "details": "Stawiamy na responsywne uk\u0142ady, natywny dark-mode i architektur\u0119 SEO w oparciu o React, Next.js i WebGL. Nie tworzymy tylko stron \u2013 budujemy do\u015bwiadczenia, kt\u00f3re anga\u017cuj\u0105 i konwertuj\u0105.",
+          "stack": ["React", "Next.js", "WebGL", "TailwindCSS"]
+        },
+        {
+          "id": "app-dev",
+          "title": "Aplikacje Webowe",
+          "blurb": "Skalowalne, bezpieczne i gotowe na AI aplikacje, kt\u00f3re obs\u0142uguj\u0105 z\u0142o\u017con\u0105 logik\u0119 z lekko\u015bci\u0105.",
+          "icon_url": "/assets/9FN85-web_app_development_icon_glassmorphism_index_2@1024x1024.jpeg",
+          "details": "Budujemy skalowaln\u0105, API-first infrastruktur\u0119 chmurow\u0105 z wykorzystaniem Node.js, Pythona i Dockera. Od MVP po skal\u0119 enterprise \u2013 architektura gotowa na du\u017ce obci\u0105\u017cenia i zbiory danych.",
+          "stack": ["Node.js", "Python", "Docker", "AWS"]
+        },
+        {
+          "id": "maintenance",
+          "title": "Utrzymanie i Support",
+          "blurb": "Proaktywne monitorowanie ekosystemu. Dbamy o to, by Twoja infrastruktura by\u0142a odporna na entropi\u0119.",
+          "icon_url": "/assets/96H23-website_maintenance_support_icon_index_3@1024x1024.jpeg",
+          "details": "Ca\u0142odobowy monitoring, natychmiastowe \u0142atki bezpiecze\u0144stwa oraz miesi\u0119czne audyty wydajno\u015bci, kt\u00f3re utrzymuj\u0105 systemy w nominalnym stanie. Dzia\u0142amy jak cyfrowy uk\u0142ad odporno\u015bciowy.",
+          "stack": ["Security", "CI/CD", "Monitoring", "Audits"]
+        }
+      ],
+      "portfolio": [
+        {
+          "id": "p1",
+          "title": "Nexus FinTech",
+          "category": "Aplikacja webowa",
+          "image": "/assets/4FWWW-futuristic_portfolio_thumbnails_index_0@1024x1024.jpeg",
+          "desc": "Pulpit HFT z biometryczn\u0105 autoryzacj\u0105 w czasie rzeczywistym.",
+          "details": "Bezpieczna, niskolatencyjna platforma tradingowa dla inwestor\u00f3w instytucjonalnych. Dane z websocket\u00f3w w czasie rzeczywistym, uwierzytelnianie biometryczne WebAuthn i tr\u00f3jwymiarowa wizualizacja danych."
+        },
+        {
+          "id": "p2",
+          "title": "Aether AI",
+          "category": "Generatywna AI",
+          "image": "/assets/4FWWW-futuristic_portfolio_thumbnails_index_0@1024x1024.jpeg",
+          "desc": "Interfejs LLM zoptymalizowany do in\u017cynierii prompt\u00f3w.",
+          "details": "Niestandardowa nak\u0142adka na GPT-4 dla power-user\u00f3w z \u0142a\u0144cuchowaniem prompt\u00f3w, wstrzykiwaniem zmiennych i lokalnym szyfrowaniem historii."
+        },
+        {
+          "id": "p3",
+          "title": "Orbit E-Commerce",
+          "category": "Projektowanie WWW",
+          "image": "/assets/4FWWW-futuristic_portfolio_thumbnails_index_0@1024x1024.jpeg",
+          "desc": "Luksusowe zakupy z renderem 3D produktów w WebGL.",
+          "details": "Nagrodzony sklep z widokiem 360\u00b0, przymiark\u0105 AR oraz headless CMS dla szybkich aktualizacji tre\u015bci."
+        }
+      ],
+      "about": {
+        "background": "/assets/YWW72-mb_soft_about_background_index_1@1024x1024.jpeg",
+        "mission": "Istniejemy, by po\u0142\u0105czy\u0107 rygor in\u017cynierii oprogramowania z organiczn\u0105 inteligencj\u0105.",
+        "approach": "Ustrukturyzowana P\u0142ynno\u015b\u0107: niezawodne siatki spotykaj\u0105 organiczn\u0105 adaptacj\u0119. Wdra\u017camy kod, kt\u00f3ry uczy si\u0119 i ewoluuje."
+      },
+      "contact": {
+        "map_image": "/assets/I0QQI-contact_page_network_visualization_index_2@1024x1024.jpeg"
+      }
+    }
+  }
+}
