@@ -61,6 +61,10 @@
             "submit": "[ TRANSMIT DATA ]",
             "sending": "[ TRANSMITTING... ]",
             "success": "[ DATA RECEIVED ]"
+          },
+          "messages": {
+            "success": "Thanks for your submission!",
+            "error": "Oops! There was a problem submitting your form"
           }
         },
         "footer": {
@@ -75,13 +79,13 @@
         "name": "MB Soft",
         "tagline": "WE ENGINEER INTELLIGENCE.",
         "subheadline": [
-          "Custom LLMs",
-          "Cloud Infrastructure",
-          "Immersive Web Experiences"
+          "Web Design & Development",
+          "Web Application Development",
+          "Maintenance & Support"
         ],
         "description": "Architecting the digital future with precision and algorithmic elegance.",
-        "email": "hello@mbsoft.tech",
-        "phone": "+1 (555) 010-2025",
+        "email": "kontakt@mbsoft.pl",
+        "phone": "+48 ",
         "address": "Digital Nomad Network / Global",
         "logo_url": "/assets/logo.png"
       },
@@ -170,22 +174,22 @@
         "services": {
           "headingMain": "KLUCZOWE",
           "headingHighlight": "KOMPETENCJE",
-          "tagline": "// Budujemy skalowalne architektury nowej generacji interakcji web.",
+          "tagline": "// Budujemy technologi\u0119, kt\u00f3ra definiuje przysz\u0142o\u015b\u0107 cyfrowych do\u015bwiadcze\u0144.",
           "accessDetails": "[ ZOBACZ_SZCZEG\u00d3\u0141Y ]"
         },
         "portfolio": {
           "headingMain": "WYBRANE",
           "headingHighlight": "REALIZACJE",
-          "subheading": "STUDIA_PRZYPADK\u00d3W_2025"
+          "subheading": "STUDIUM_PRZYPADK\u00d3W_2025"
         },
         "about": {
           "headingMain": "\u0141\u0104CZYMY KOD I",
-          "headingHighlight": "KOGNICJ\u0118",
+          "headingHighlight": " MY\u015aLENIE",
           "retention": "% RETENCJI KLIENT\u00d3W",
           "uptime": "DOST\u0118PNO\u015a\u0106 SYSTEMU"
         },
         "contact": {
-          "headingMain": "ZAINICJUJ",
+          "headingMain": "NAWI\u0104\u017b",
           "headingHighlight": "KONTAKT",
           "description": "Opowiedz nam o architekturze swojego projektu.",
           "form": {
@@ -210,11 +214,15 @@
             "submit": "[ WY\u015aLIJ DANE ]",
             "sending": "[ WYSY\u0141ANIE... ]",
             "success": "[ DANE OTRZYMANE ]"
+          },
+          "messages": {
+            "success": "Dzi\u0119kujemy za wiadomo\u015b\u0107!",
+            "error": "Ups! Wyst\u0105pi\u0142 problem podczas wysy\u0142ania formularza"
           }
         },
         "footer": {
-          "status": "STATUS SYSTEMU: NOMINALNY",
-          "copyright": "\u00a9 2025 MB SOFT. WSZYSTKIE SYSTEMY NOMINALNE."
+          "status": "STATUS SYSTEMU: STABILNY",
+          "copyright": "\u00a9 2025 MB SOFT. WSZYSTKIE SYSTEMY W GOTOWO\u015aCI."
         },
         "modal": {
           "cta": "[ ZAM\u00d3W PODOBNY PROJEKT ]"
@@ -224,13 +232,13 @@
         "name": "MB Soft",
         "tagline": "PROJEKTUJEMY INTELIGENCJ\u0118.",
         "subheadline": [
-          "Dedykowane modele LLM",
-          "Infrastruktura chmurowa",
-          "Immersyjne do\u015bwiadczenia webowe"
+          "Strony internetowe",
+          "Aplikacje webowe",
+          "Utrzymanie i wsparcie"
         ],
         "description": "Projektujemy cyfrow\u0105 przysz\u0142o\u015b\u0107 z precyzj\u0105 i algorytmiczn\u0105 elegancj\u0105.",
-        "email": "hello@mbsoft.tech",
-        "phone": "+1 (555) 010-2025",
+        "email": "kontakt@mbsoft.pl",
+        "phone": "+48 ",
         "address": "Digital Nomad Network / Global",
         "logo_url": "/assets/logo.png"
       },
@@ -241,23 +249,23 @@
         {
           "id": "web-design",
           "title": "Projektowanie WWW",
-          "blurb": "Pixel-perfect spotyka wydajno\u015b\u0107. Tworzymy immersyjne \u015brodowiska cyfrowe.",
+          "blurb": "Perfekcyjna estetyka i wydajny kod. Budujemy wci\u0105gaj\u0105ce \u015brodowiska cyfrowe.",
           "icon_url": "/assets/HVS1M-web_design_development_icon_index_1@1024x1024.jpeg",
-          "details": "Stawiamy na responsywne uk\u0142ady, natywny dark-mode i architektur\u0119 SEO w oparciu o React, Next.js i WebGL. Nie tworzymy tylko stron \u2013 budujemy do\u015bwiadczenia, kt\u00f3re anga\u017cuj\u0105 i konwertuj\u0105.",
-          "stack": ["React", "Next.js", "WebGL", "TailwindCSS"]
+          "details": "Stawiamy na responsywne uk\u0142ady, natywny dark-mode i architektur\u0119 SEO w oparciu o Wordpress, React i Next.js. Nie tworzymy tylko stron \u2013 budujemy do\u015bwiadczenia, kt\u00f3re anga\u017cuj\u0105 i konwertuj\u0105.",
+          "stack": ["Wordpress", "React", "Next.js", "TailwindCSS", "Typescript"]
         },
         {
           "id": "app-dev",
           "title": "Aplikacje Webowe",
           "blurb": "Skalowalne, bezpieczne i gotowe na AI aplikacje, kt\u00f3re obs\u0142uguj\u0105 z\u0142o\u017con\u0105 logik\u0119 z lekko\u015bci\u0105.",
           "icon_url": "/assets/9FN85-web_app_development_icon_glassmorphism_index_2@1024x1024.jpeg",
-          "details": "Budujemy skalowaln\u0105, API-first infrastruktur\u0119 chmurow\u0105 z wykorzystaniem Node.js, Pythona i Dockera. Od MVP po skal\u0119 enterprise \u2013 architektura gotowa na du\u017ce obci\u0105\u017cenia i zbiory danych.",
-          "stack": ["Node.js", "Python", "Docker", "AWS"]
+          "details": "Budujemy skalowaln\u0105, API-first infrastruktur\u0119 chmurow\u0105 z wykorzystaniem Django, Pythona i Dockera. Od MVP po skal\u0119 enterprise \u2013 architektura gotowa na du\u017ce obci\u0105\u017cenia i zbiory danych.",
+          "stack": ["Django", "Python", "Docker", "AWS"]
         },
         {
           "id": "maintenance",
           "title": "Utrzymanie i Support",
-          "blurb": "Proaktywne monitorowanie ekosystemu. Dbamy o to, by Twoja infrastruktura by\u0142a odporna na entropi\u0119.",
+          "blurb": "Proaktywny monitoring. Chronimy Twoj\u0105 infrastruktur\u0119 przed cyfrowym chaosem.",
           "icon_url": "/assets/96H23-website_maintenance_support_icon_index_3@1024x1024.jpeg",
           "details": "Ca\u0142odobowy monitoring, natychmiastowe \u0142atki bezpiecze\u0144stwa oraz miesi\u0119czne audyty wydajno\u015bci, kt\u00f3re utrzymuj\u0105 systemy w nominalnym stanie. Dzia\u0142amy jak cyfrowy uk\u0142ad odporno\u015bciowy.",
           "stack": ["Security", "CI/CD", "Monitoring", "Audits"]
@@ -291,8 +299,8 @@
       ],
       "about": {
         "background": "/assets/YWW72-mb_soft_about_background_index_1@1024x1024.jpeg",
-        "mission": "Istniejemy, by po\u0142\u0105czy\u0107 rygor in\u017cynierii oprogramowania z organiczn\u0105 inteligencj\u0105.",
-        "approach": "Ustrukturyzowana P\u0142ynno\u015b\u0107: niezawodne siatki spotykaj\u0105 organiczn\u0105 adaptacj\u0119. Wdra\u017camy kod, kt\u00f3ry uczy si\u0119 i ewoluuje."
+        "mission": "\u0141\u0105czymy precyzj\u0119 software engineeringu z elastyczno\u015bci\u0105 ludzkiej inteligencji.",
+        "approach": "Uporz\u0105dkowana p\u0142ynno\u015b\u0107: niezawodne fundamenty + adaptacja. Tworzymy rozwi\u0105zania, kt\u00f3re ucz\u0105 si\u0119 w dzia\u0142aniu i rozwijaj\u0105 razem z Twoim produktem."
       },
       "contact": {
         "map_image": "/assets/I0QQI-contact_page_network_visualization_index_2@1024x1024.jpeg"

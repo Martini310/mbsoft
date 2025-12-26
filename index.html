@@ -245,19 +245,19 @@
                         <h2 class="font-heading font-bold text-3xl mb-2"><span id="contact-heading-main" data-i18n="contact.headingMain">INITIALIZE</span> <span class="text-cyanpulse" id="contact-heading-highlight" data-i18n="contact.headingHighlight">CONNECTION</span></h2>
                         <p class="text-slatemist mb-8 font-mono text-sm" id="contact-description" data-i18n="contact.description">Tell us about your project architecture.</p>
                         
-                        <form id="contact-form" class="space-y-6">
+                        <form id="my-form" action="https://formspree.io/f/xaqynzkb" method="POST" class="space-y-6">
                             <div class="group">
                                 <label class="block text-xs font-mono text-azure mb-1" id="label-name" data-i18n="contact.form.name">ID // NAME</label>
-                                <input id="input-name" type="text" placeholder="Enter your designation..." class="w-full bg-deepspace border border-white/10 rounded p-3 text-white focus:border-cyanpulse focus:outline-none focus:bg-deepspace/50 transition-all" required>
+                                <input id="input-name" name="name" type="text" placeholder="Enter your designation..." class="w-full bg-deepspace border border-white/10 rounded p-3 text-white focus:border-cyanpulse focus:outline-none focus:bg-deepspace/50 transition-all" required>
                             </div>
                             <div class="group">
                                 <label class="block text-xs font-mono text-azure mb-1" id="label-email" data-i18n="contact.form.email">COMMS // EMAIL</label>
-                                <input id="input-email" type="email" placeholder="name@domain.com" class="w-full bg-deepspace border border-white/10 rounded p-3 text-white focus:border-cyanpulse focus:outline-none focus:bg-deepspace/50 transition-all" required>
+                                <input id="input-email" name="email" type="email" placeholder="name@domain.com" class="w-full bg-deepspace border border-white/10 rounded p-3 text-white focus:border-cyanpulse focus:outline-none focus:bg-deepspace/50 transition-all" required>
                             </div>
                             <div class="group">
                                 <label class="block text-xs font-mono text-azure mb-1" id="label-subject" data-i18n="contact.form.subject">PROTOCOL // SUBJECT</label>
                                 <div class="relative">
-                                    <select id="subject-select" class="w-full bg-deepspace border border-white/10 rounded p-3 text-white focus:border-cyanpulse focus:outline-none appearance-none cursor-pointer transition-all">
+                                    <select id="subject-select" name="subject" class="w-full bg-deepspace border border-white/10 rounded p-3 text-white focus:border-cyanpulse focus:outline-none appearance-none cursor-pointer transition-all">
                                         <option>Web Design & Development</option>
                                         <option>Web Application</option>
                                         <option>Maintenance & Support</option>
@@ -268,11 +268,12 @@
                             </div>
                             <div class="group">
                                 <label class="block text-xs font-mono text-azure mb-1" id="label-message" data-i18n="contact.form.message">PAYLOAD // MESSAGE</label>
-                                <textarea id="input-message" rows="4" placeholder="Describe your project parameters..." class="w-full bg-deepspace border border-white/10 rounded p-3 text-white focus:border-cyanpulse focus:outline-none focus:bg-deepspace/50 transition-all" required></textarea>
+                                <textarea id="input-message" name="message" rows="4" placeholder="Describe your project parameters..." class="w-full bg-deepspace border border-white/10 rounded p-3 text-white focus:border-cyanpulse focus:outline-none focus:bg-deepspace/50 transition-all" required></textarea>
                             </div>
-                            <button type="submit" class="w-full py-4 bg-gradient-to-r from-azure to-hyperviolet font-bold tracking-widest text-white rounded hover:shadow-[0_0_20px_rgba(46,92,255,0.4)] transition-all transform active:scale-[0.98]" id="contact-submit" data-i18n="contact.buttons.submit">
+                            <button type="submit" id="my-form-button" class="w-full py-4 bg-gradient-to-r from-azure to-hyperviolet font-bold tracking-widest text-white rounded hover:shadow-[0_0_20px_rgba(46,92,255,0.4)] transition-all transform active:scale-[0.98]" data-i18n="contact.buttons.submit">
                                 [ TRANSMIT DATA ]
                             </button>
+                            <p id="my-form-status" class="text-center text-sm font-mono"></p>
                         </form>
                     </div>
 
@@ -288,7 +289,7 @@
                             <p id="contact-address" class="text-slatemist text-sm"></p>
                             <div class="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-4"></div>
                             <p id="contact-email" class="font-mono text-cyanpulse hover:text-white transition-colors cursor-pointer"></p>
-                            <p id="contact-phone" class="font-mono text-white"></p>
+                            <!-- <p id="contact-phone" class="font-mono text-white"></p> -->
                         </div>
                     </div>
                 </div>
@@ -341,5 +342,158 @@
 
     <!-- Scripts -->
     <script type="module" src="main.js"></script>
+    <script>
+      var form = document.getElementById("my-form");
+      var button = document.getElementById("my-form-button");
+      var originalButtonText = button ? button.innerHTML : '';
+      
+      function getButtonText(key) {
+        if (typeof window.getTranslation === 'function') {
+          var translation = window.getTranslation('text.contact.buttons.' + key);
+          if (translation && translation !== '') {
+            return translation;
+          }
+        }
+        // Fallbacks
+        var fallbacks = {
+          'submit': '[ TRANSMIT DATA ]',
+          'sending': '[ TRANSMITTING... ]',
+          'success': '[ DATA RECEIVED ]'
+        };
+        return fallbacks[key] || '[ ' + key.toUpperCase() + ' ]';
+      }
+      
+      function getMessage(key) {
+        if (typeof window.getTranslation === 'function') {
+          var translation = window.getTranslation('text.contact.messages.' + key);
+          if (translation && translation !== '') {
+            return translation;
+          }
+        }
+        // Fallbacks
+        var fallbacks = {
+          'success': 'Thanks for your submission!',
+          'error': 'Oops! There was a problem submitting your form'
+        };
+        return fallbacks[key] || '';
+      }
+      
+      function getOriginalButtonText() {
+        if (typeof window.getTranslation === 'function') {
+          var translation = window.getTranslation('text.contact.buttons.submit');
+          if (translation && translation !== '') {
+            return translation;
+          }
+        }
+        return '[ TRANSMIT DATA ]';
+      }
+      
+      function updateButtonText() {
+        if (button) {
+          originalButtonText = getOriginalButtonText();
+          if (!button.disabled) {
+            button.innerHTML = originalButtonText;
+          }
+        }
+      }
+      
+      // Expose function globally so main.js can call it
+      window.updateButtonText = updateButtonText;
+      
+      // Initialize button text on load (wait for main.js to load languages)
+      function initFormButton() {
+        if (typeof window.getTranslation === 'function') {
+          updateButtonText();
+        } else {
+          // Retry after a short delay if main.js hasn't loaded yet
+          setTimeout(initFormButton, 100);
+        }
+      }
+      
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+          setTimeout(initFormButton, 300);
+        });
+      } else {
+        setTimeout(initFormButton, 300);
+      }
+      
+      // Update button text on language change
+      var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.type === 'attributes' && mutation.attributeName === 'lang') {
+            updateButtonText();
+          }
+        });
+      });
+      observer.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+      
+      async function handleSubmit(event) {
+        event.preventDefault();
+        var status = document.getElementById("my-form-status");
+        
+        // Update button state - always get fresh translation
+        var sendingText = getButtonText('sending');
+        button.innerHTML = "<span class=\"animate-pulse\">" + sendingText + "</span>";
+        button.disabled = true;
+        button.classList.add('opacity-75', 'cursor-not-allowed');
+        status.innerHTML = "";
+        status.className = "text-center text-sm font-mono";
+        
+        var data = new FormData(event.target);
+        fetch(event.target.action, {
+          method: form.method,
+          body: data,
+          headers: {
+              'Accept': 'application/json'
+          }
+        }).then(response => {
+          if (response.ok) {
+            // Always get fresh translation for success message
+            var successMessage = getMessage('success');
+            status.innerHTML = successMessage;
+            status.className = "text-center text-sm font-mono text-green-400";
+            
+            // Always get fresh translation for success button
+            var successButtonText = getButtonText('success');
+            button.innerHTML = successButtonText;
+            button.classList.remove('from-azure', 'to-hyperviolet');
+            button.classList.add('bg-green-500', 'border-transparent');
+            form.reset();
+            
+            // Reset button after 3 seconds
+            setTimeout(() => {
+              updateButtonText();
+              button.classList.add('from-azure', 'to-hyperviolet');
+              button.classList.remove('bg-green-500', 'opacity-75', 'cursor-not-allowed', 'border-transparent');
+              button.disabled = false;
+              status.innerHTML = "";
+            }, 3000);
+          } else {
+            response.json().then(data => {
+              if (Object.hasOwn(data, 'errors')) {
+                status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                status.className = "text-center text-sm font-mono text-red-400";
+              } else {
+                var errorMessage = getMessage('error');
+                status.innerHTML = errorMessage;
+                status.className = "text-center text-sm font-mono text-red-400";
+              }
+              updateButtonText();
+              button.classList.remove('opacity-75', 'cursor-not-allowed');
+              button.disabled = false;
+            })
+          }
+        }).catch(error => {
+          var errorMessage = getMessage('error');
+          status.innerHTML = errorMessage;
+          status.className = "text-center text-sm font-mono text-red-400";
+          updateButtonText();
+          button.classList.remove('opacity-75', 'cursor-not-allowed');
+          button.disabled = false;
+        });
+      }
+      form.addEventListener("submit", handleSubmit);
+    </script>
 </body>
 </html>

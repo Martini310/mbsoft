@@ -12,7 +12,7 @@ export function setUIText(text) {
         uiText.buttons = { ...uiText.buttons, ...text.buttons };
     }
 
-    const submitButton = document.getElementById('contact-submit');
+    const submitButton = document.getElementById('my-form-button');
     if (submitButton && uiText.buttons.submit) {
         submitButton.innerHTML = uiText.buttons.submit;
     }
@@ -28,7 +28,7 @@ export function populateContent(data) {
     
     document.getElementById('contact-address').textContent = data.company.address;
     document.getElementById('contact-email').textContent = data.company.email;
-    document.getElementById('contact-phone').textContent = data.company.phone;
+    // document.getElementById('contact-phone').textContent = data.company.phone;
 }
 
 export function renderServices(services, textOverrides = {}) {
@@ -192,29 +192,4 @@ export function initUI() {
     });
 
 
-    const form = document.getElementById('contact-form');
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const btn = form.querySelector('button');
-        const originalText = uiText.buttons.submit || btn.innerHTML;
-        
-        btn.innerHTML = `<span class="animate-pulse">${uiText.buttons.sending || '[ TRANSMITTING... ]'}</span>`;
-        btn.disabled = true;
-        btn.classList.add('opacity-75', 'cursor-not-allowed');
-
-        setTimeout(() => {
-            btn.innerHTML = uiText.buttons.success || '[ DATA RECEIVED ]';
-            btn.classList.remove('from-azure', 'to-hyperviolet');
-            btn.classList.add('bg-green-500', 'border-transparent');
-            
-            setTimeout(() => {
-                form.reset();
-                btn.innerHTML = originalText;
-                btn.classList.add('from-azure', 'to-hyperviolet');
-                btn.classList.remove('bg-green-500', 'opacity-75', 'cursor-not-allowed', 'border-transparent');
-                btn.disabled = false;
-
-            }, 3000);
-        }, 1500);
-    });
 }

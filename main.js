@@ -4,6 +4,21 @@ import { initUI, renderServices, renderPortfolio, populateContent, setUIText } f
 let languages = {};
 let currentLang = 'en';
 
+// Expose translation function globally for Formspree script
+window.getTranslation = function(path, defaultValue = '') {
+    const langData = languages[currentLang];
+    if (!langData) return defaultValue;
+    const keys = path.split('.');
+    let value = langData;
+    for (const key of keys) {
+        if (value === null || value === undefined) return defaultValue;
+        value = value[key];
+    }
+    // Return the value even if it's an empty string, but return defaultValue if undefined/null
+    if (value === undefined || value === null) return defaultValue;
+    return value;
+};
+
 document.addEventListener('DOMContentLoaded', async () => {
 
     const loaderBar = document.getElementById('loader-bar');
@@ -63,6 +78,15 @@ function renderLanguage(lang) {
     typeWriterEffect(langData.company.subheadline);
     lucide.createIcons();
     syncLanguageSwitchers(lang);
+    
+    // Update form button text
+    const formButton = document.getElementById('my-form-button');
+    if (formButton && langData.text.contact?.buttons?.submit) {
+        formButton.innerHTML = langData.text.contact.buttons.submit;
+        if (window.updateButtonText) {
+            window.updateButtonText();
+        }
+    }
 }
 
 function applyTranslations(texts) {
