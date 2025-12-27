@@ -1,3 +1,25 @@
+// Initialize parallax transforms early to prevent layout shift
+export function initParallaxEarly() {
+    gsap.registerPlugin(ScrollTrigger);
+    const parallaxElems = document.querySelectorAll('.parallax-element');
+    parallaxElems.forEach(elem => {
+        const speed = elem.getAttribute('data-speed') || 0.5;
+        // Set initial transform state immediately (at scroll 0)
+        gsap.set(elem, { y: 0 });
+        // Then set up the scroll animation
+        gsap.to(elem, {
+            y: (i, target) => -ScrollTrigger.maxScroll(window) * speed * 0.1,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: elem,
+                start: 'top bottom',
+                end: 'bottom top',
+                scrub: 0
+            }
+        });
+    });
+}
+
 export function initAnimations() {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -18,22 +40,6 @@ export function initAnimations() {
                 }
             }
         );
-    });
-
-
-    const parallaxElems = document.querySelectorAll('.parallax-element');
-    parallaxElems.forEach(elem => {
-        const speed = elem.getAttribute('data-speed') || 0.5;
-        gsap.to(elem, {
-            y: (i, target) => -ScrollTrigger.maxScroll(window) * speed * 0.1,
-            ease: 'none',
-            scrollTrigger: {
-                trigger: elem,
-                start: 'top bottom',
-                end: 'bottom top',
-                scrub: 0
-            }
-        });
     });
 
 

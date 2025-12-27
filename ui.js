@@ -40,7 +40,7 @@ export function renderServices(services, textOverrides = {}) {
             
             <div class="relative z-10">
                 <div class="w-14 h-14 bg-deepspace rounded-lg border border-azure/30 flex items-center justify-center shadow-[0_0_15px_rgba(46,92,255,0.3)] mb-8 group-hover:scale-110 transition-transform duration-300">
-                    <img src="${service.icon_url}" class="w-8 h-8 object-contain" alt="${service.title}" loading="lazy">
+                    <img src="${service.icon_url}" class="w-16 h-16 object-contain" alt="${service.title}" loading="lazy">
                 </div>
                 <h3 class="font-heading font-bold text-xl text-white mb-3 group-hover:text-cyanpulse transition-colors">${service.title}</h3>
                 <p class="text-slatemist text-sm leading-relaxed mb-6">${service.blurb}</p>

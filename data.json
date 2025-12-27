@@ -97,7 +97,7 @@
           "id": "web-design",
           "title": "Web Design & Dev",
           "blurb": "Pixel-perfect aesthetics meet high-performance code. We construct immersive digital environments.",
-          "icon_url": "/assets/HVS1M-web_design_development_icon_index_1@1024x1024.jpeg",
+          "icon_url": "/assets/projektowaniewww.png",
           "details": "Our web design process focuses on responsive fluidity, dark-mode native aesthetics, and SEO architecture using React, Next.js, and WebGL. We don't just build websites; we create digital experiences that captivate and convert.",
           "stack": ["React", "Next.js", "WebGL", "TailwindCSS"]
         },
@@ -105,7 +105,7 @@
           "id": "app-dev",
           "title": "Web App Development",
           "blurb": "Scalable, secure, and AI-ready applications designed to handle complex logic with fluid simplicity.",
-          "icon_url": "/assets/9FN85-web_app_development_icon_glassmorphism_index_2@1024x1024.jpeg",
+          "icon_url": "/assets/aplikacjewebowe.png",
           "details": "We build API-first, scalable cloud infrastructure using Node.js, Python, and Docker. From MVP to enterprise-scale, our architecture is designed to handle high concurrency and large datasets.",
           "stack": ["Node.js", "Python", "Docker", "AWS"]
         },
@@ -113,7 +113,7 @@
           "id": "maintenance",
           "title": "Maintenance & Support",
           "blurb": "Proactive ecosystem monitoring. We ensure your infrastructure remains resilient against entropy.",
-          "icon_url": "/assets/96H23-website_maintenance_support_icon_index_3@1024x1024.jpeg",
+          "icon_url": "/assets/utrzymanie.png",
           "details": "24/7 Uptime monitoring, immediate security patching, and monthly performance audits to keep your systems nominal. We act as your digital immune system.",
           "stack": ["Security", "CI/CD", "Monitoring", "Audits"]
         }
@@ -250,7 +250,7 @@
           "id": "web-design",
           "title": "Projektowanie WWW",
           "blurb": "Perfekcyjna estetyka i wydajny kod. Budujemy wci\u0105gaj\u0105ce \u015brodowiska cyfrowe.",
-          "icon_url": "/assets/HVS1M-web_design_development_icon_index_1@1024x1024.jpeg",
+          "icon_url": "/assets/projektowaniewww.png",
           "details": "Stawiamy na responsywne uk\u0142ady, natywny dark-mode i architektur\u0119 SEO w oparciu o Wordpress, React i Next.js. Nie tworzymy tylko stron \u2013 budujemy do\u015bwiadczenia, kt\u00f3re anga\u017cuj\u0105 i konwertuj\u0105.",
           "stack": ["Wordpress", "React", "Next.js", "TailwindCSS", "Typescript"]
         },
@@ -258,7 +258,7 @@
           "id": "app-dev",
           "title": "Aplikacje Webowe",
           "blurb": "Skalowalne, bezpieczne i gotowe na AI aplikacje, kt\u00f3re obs\u0142uguj\u0105 z\u0142o\u017con\u0105 logik\u0119 z lekko\u015bci\u0105.",
-          "icon_url": "/assets/9FN85-web_app_development_icon_glassmorphism_index_2@1024x1024.jpeg",
+          "icon_url": "/assets/aplikacjewebowe.png",
           "details": "Budujemy skalowaln\u0105, API-first infrastruktur\u0119 chmurow\u0105 z wykorzystaniem Django, Pythona i Dockera. Od MVP po skal\u0119 enterprise \u2013 architektura gotowa na du\u017ce obci\u0105\u017cenia i zbiory danych.",
           "stack": ["Django", "Python", "Docker", "AWS"]
         },
@@ -266,7 +266,7 @@
           "id": "maintenance",
           "title": "Utrzymanie i Support",
           "blurb": "Proaktywny monitoring. Chronimy Twoj\u0105 infrastruktur\u0119 przed cyfrowym chaosem.",
-          "icon_url": "/assets/96H23-website_maintenance_support_icon_index_3@1024x1024.jpeg",
+          "icon_url": "/assets/utrzymanie.png",
           "details": "Ca\u0142odobowy monitoring, natychmiastowe \u0142atki bezpiecze\u0144stwa oraz miesi\u0119czne audyty wydajno\u015bci, kt\u00f3re utrzymuj\u0105 systemy w nominalnym stanie. Dzia\u0142amy jak cyfrowy uk\u0142ad odporno\u015bciowy.",
           "stack": ["Security", "CI/CD", "Monitoring", "Audits"]
         }

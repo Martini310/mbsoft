@@ -1,4 +1,4 @@
-import { initAnimations, typeWriterEffect } from './animations.js';
+import { initAnimations, initParallaxEarly, typeWriterEffect } from './animations.js';
 import { initUI, renderServices, renderPortfolio, populateContent, setUIText } from './ui.js';
 
 let languages = {};
@@ -41,6 +41,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         initUI();
         lucide.createIcons();
 
+        // Initialize parallax transforms early to prevent layout shift
+        initParallaxEarly();
 
         await new Promise(resolve => setTimeout(resolve, 800)); // Simulate minimum load time
         loaderBar.style.width = '100%';
